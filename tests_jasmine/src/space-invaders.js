@@ -60,7 +60,7 @@ var PubGame = (function() {
   var Invader = function(game, center) {
     this.game = game;
     this.center = center;
-    this.size = { x: 15, y: 15 };
+    this.size = { x: Math.random(), y: Math.random() };
     this.patrolX = 0;
     this.speedX = 0.3;
   };
@@ -77,6 +77,8 @@ var PubGame = (function() {
                                 { x: this.center.x, y: this.center.y + this.size.y / 2 },
                                 { x: Math.random() - 0.5, y: 2 });
         this.game.addBody(bullet);
+        this.game.shootSound.load();
+        this.game.shootSound.play();
       }
 
       this.center.x += this.speedX;
