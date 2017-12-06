@@ -1,6 +1,6 @@
 var PubGame = (function() {
   if(!window.jasmine){
-    document.getElementById('#screen').remove()
+    window.addEventListener('DOMContentLoaded', refucktered);
   }
 
   var Game = function(document, window) {
@@ -224,3 +224,7 @@ var PubGame = (function() {
 
   return Game;
 })();
+
+function refucktered(){  
+  document.getElementsByTagName('h1')[0].innerHTML += `<span id="refucktered">&nbsp;Refucktered</span>`
+}
