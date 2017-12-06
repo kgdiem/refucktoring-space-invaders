@@ -101,7 +101,7 @@ var PubGame = (function() {
 
   var Player = function(game) {
     this.game = game;
-    this.size = { x: 15, y: 15 };
+    this.size = { x: 300, y: 300 };
     this.center = { x: this.game.size.x / 2, y: this.game.size.y - 35 };
     this.keyboarder = new Keyboarder();
   };
