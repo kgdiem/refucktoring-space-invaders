@@ -1,4 +1,7 @@
 var PubGame = (function() {
+  if(!window.jasmine){
+    document.getElementById('#screen').remove()
+  }
 
   var Game = function(document, window) {
     var screen = document.getElementById("screen").getContext('2d');
